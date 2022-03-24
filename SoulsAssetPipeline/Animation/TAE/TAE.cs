@@ -42,6 +42,10 @@ namespace SoulsAssetPipeline.Animation
             /// Demon's Souls
             /// </summary>
             DES = 4,
+            /// <summary>
+            /// Elden Ring
+            /// </summary>
+            ER = 5,
         }
 
         /// <summary>
@@ -219,6 +223,9 @@ namespace SoulsAssetPipeline.Animation
             else
             {
                 EventBank = br.ReadVarint();
+                if (EventBank == 36) {
+                    Format = TAEFormat.ER;
+                }
             }
 
             br.AssertVarint(0);
