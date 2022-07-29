@@ -18,5 +18,6 @@ namespace SoulsAssetPipeline
         DS3 = 1 << 5,
         BB = 1 << 6,
         SDT = 1 << 7,
+        ER = 1 << 8,
     }
 }
